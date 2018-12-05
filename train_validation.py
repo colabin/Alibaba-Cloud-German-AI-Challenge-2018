@@ -1,12 +1,11 @@
 import tensorflow as tf 
 import numpy as np
-from nets.tianchi_net import get_resnet
+from net.L_Resnet_E_IR import get_resnet
 import time
 from tensorflow.core.protobuf import config_pb2
 import tensorlayer as tl
 import os
 import h5py
-import pandas as pd
 
 batch_size = 256 
 
