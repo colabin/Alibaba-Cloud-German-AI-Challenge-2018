@@ -11,6 +11,6 @@ https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.100067.5678.1.3
 
 目前的参考方案：<br/>
 1.采用端到端的网络，输出直接是label<br/>
-2.先利用神经网络学习特征，然后获取神经网络最后一层的向量，利用传统分类器，如GBDT,LightGBM来分类
+2.先利用神经网络学习特征，然后获取神经网络最后一层的向量，利用传统分类器，如GBDT,LightGBM来分类<br/>
 3.神经网络集成
 
