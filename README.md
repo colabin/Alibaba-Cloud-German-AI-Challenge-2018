@@ -30,7 +30,7 @@ c.sen1图层的像素波动很大（从负数到上千），sen2图层像素多�
 [4]<br/>
 
 特征提取模块：<br/>
-暂时没有很好的idea<br/>
+对sen1,sen2做数据融合，参考blog http://blog.sina.com.cn/s/articlelist_1984634525_4_1.html<br/>
 
 后处理模块：<br/>
 [5],[6],[7]<br/>
