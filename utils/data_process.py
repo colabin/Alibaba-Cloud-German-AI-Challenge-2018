@@ -11,7 +11,7 @@ def slipt(path,ouputs1,ouputs2,nums):
     prob /= prob.sum()
     ll=len(labels)
     print(ll)
-    select=np.random.choice(np.arange(ll), size=1000,replace=False,p=prob)
+    select=np.random.choice(np.arange(ll), size=nums,replace=False,p=prob)
     labels= np.argmax(np.array([fid['label'][i] for i in select]),1)
     distrib2 = np.bincount(labels)
     print(distrib2)
