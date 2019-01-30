@@ -61,7 +61,7 @@ https://zhuanlan.zhihu.com/p/52477264<br/>
 20.mega.h5，sen2，acc4000上0.89，线上77%<br/>
 21.mega.h5，sen2原始数据+sen1的0,1,2,3复变量长度生成2个通道，acc4000上88%，线上75%<br/>
 22.mega.h5，sen1,sen2全部通道不做任何处理，acc4000上39%，mega1和mega2上的效果差不多，都在0.38+，线上73%<br/>
-23.将train和val打乱，交叉验证，线下88%，线上75%<br/>
+23.将train和val打乱，28划分数据集，线下88%，线上75%<br/>
 24.val21000，sen1+sen2，val3000上88%，线上73%<br/>
 25.mega.h5，sen1,sen2归一化，acc4000上91%，线上77%<br/>
 26.mega.h5，sen2的所有通道除以2.8，对0，1，2（rgb）通道做去雾+对比度增强，acc4000上84%<br/>
