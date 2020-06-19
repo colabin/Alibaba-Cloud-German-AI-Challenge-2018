@@ -30,8 +30,14 @@ rgb通道去雾+对比度增强<br/>
 参考blog http://blog.sina.com.cn/s/articlelist_1984634525_4_1.html<br/>
 https://zhuanlan.zhihu.com/p/52477264<br/>
 
-后处理模块：<br/>
-先利用神经网络学习特征，然后获取神经网络最后一层的向量，利用传统分类器，如GBDT,LightGBM来分类<br/>
+文件说明:
+mega_all.py:权重采样（保证用于训练的每个batch里面类别分布基本平衡）;按通道读取;根据在验证集上的性能保存最佳模型
+data_process.ipynb用于构建数据集，从train划分出3000，valid划分出1000，合并成4000的验证集（类别分布基本平衡）
+image_process.py用于图像的预处理，包括图像归一化，增强对比度，滤波，去雾，通道融合，取对数，指数操作
+ensemble.py用于集成，和weight.csv结合使用，weight.csv控制集成的方式（简单投票，加权投票等），eg. weight.csv设置为1矩阵,则表示最简单的加权投票, 现有版本是在标签不确定情况下，取样本数较多的类别
+dehaze.py,去雾函数
+leefilter.py,滤波函数
+
 
 1.利用训练集，迭代70000步，在训练集上达到过拟合（拟合度100%），在验证集上面准确率在60%左右<br/>
 2.训练期间，实现early stopping，34000步时达到最优，此时对于训练集拟合度在90%，验证集准确率61%<br/>
